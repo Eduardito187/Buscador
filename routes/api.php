@@ -26,6 +26,8 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 // /{id} => update <= patch
 // /{id} => destroy <= delete
 
+//PRUEBAS
+
 Route::middleware([CustomValidateToken::class])->group(function () {
     Route::controller(Product::class)->group(function(){
         Route::get('product', 'index');
